@@ -1,0 +1,122 @@
+*{
+   
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(20deg , #fc9399, #c8a3f8);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+header, form{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 3rem;
+   
+}
+
+header{
+    margin: 10rem 0;
+}
+form input, form button{
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 1px transparent solid;
+    background: white;
+ 
+}
+form button{
+    color:#8b63c0 ;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: #8b63c0;
+    color: white;
+    transition: all 0.3s ease;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+    max-width: 30%;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    transition: all 0.3s ease;
+}
+.todo li{
+    flex:1;
+}
+.trash-btn, .completed-btn{
+    background: orange;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+.completed-btn{background: green;}
+.todo-item{
+    padding: 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20DEG);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+}
+.select{
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: rgb(163, 68, 116);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content:"\25bc" ;
+    position: absolute;
+    background: hotpink;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: white;
+    color: hotpink;
+}
